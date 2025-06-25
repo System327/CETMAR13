@@ -1,0 +1,115 @@
+*{
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+    font-family: Tahoma
+}
+
+.contenedor-nosotros{
+    min-height: 650px;
+    width: 100%;
+    background-color: #1284bd;
+    margin: 50px 0;
+    padding-bottom: 20px ;
+}
+
+/* PARTE TITULO*/
+.contenedor-subtitulo{
+    margin-bottom: 30px;
+}
+
+.contenedor-subtitulo h3{
+    color: #ffffff;
+    font-size: 40px;
+    padding-top: 30px;
+    text-align: center;
+}
+
+.barra-blanca{
+    padding-top: 10px;
+    display: flex;
+    justify-content: center;
+}
+
+.barra-blanca p{
+    background-color: #ffffff;
+    height: 5px;
+    width: 450px;
+}
+
+/* PARTE CONTENEDOR  */
+
+.contenedor-dentro{
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    padding: 0 200px;
+    padding-top: 20px;
+    gap: 40px;
+}
+
+.mision-vison{
+    padding: 10px;
+    color: #fff;
+}
+
+.mision-vison h2{
+    font-size: 30px;
+    padding-bottom: 10px;
+}
+
+.mision-vison p{
+    font-size: 20px;
+    padding-bottom: 50px;
+
+}
+
+
+.mapa{
+    background-color: #1B4168;
+    padding: 5px 15px;
+    border-radius: 25px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    color: #fff;
+
+}
+
+.mapa h3{
+    font-size: 30px;
+    margin-bottom: 5px;
+}
+
+.mapa p{
+    padding: 5px 10px;
+}
+
+
+/* --- Direccion ---
+
+.contenedor-subtitulo-direccion h3{
+    color: white;
+    background-color: #1284bd;
+    font-size: 40px;
+    padding-top: 20px;
+    padding-bottom: 20px;
+    text-align: center;
+}
+.texto-mapa{
+    display: flex;
+    align-items: flex-start;
+}
+
+.direccion{
+    padding-top: 30px;
+    flex: 1;
+    margin-left: 150px;
+    margin-right: 25px;
+}
+.mapa{
+    padding-top: 30px;
+    flex: 1;
+    margin-left: 25px;
+    margin-right: 150px;
+} */
