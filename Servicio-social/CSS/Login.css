@@ -1,0 +1,129 @@
+*{
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+    font-family: Tahoma;
+    
+}
+
+body{
+    background-color: #1B4168;
+}
+/* ---   --- */
+
+
+/* --- todo --- */
+@keyframes animateBlink{
+    0% {
+        background: #15A6CA;
+    }
+    25%{
+        background: #1B4168;
+    }
+}
+
+.iniciarsesion
+{
+    display: flex;
+    flex-direction: column; 
+    justify-content: center;
+    align-items: center;
+    height: 88vh;
+    margin: 50px;
+
+}
+
+.iniciarsesion img{
+    height: 150px;
+    width: auto;
+    border-radius: 100%;
+}
+
+.iniciarsesion div{
+    min-height: 80%;
+    width: 30%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    background-color: #183b5d;
+    gap: 40px;
+    border-radius: 15px;
+
+}
+
+.contenedor{
+    position: absolute;
+}
+
+h2{
+    font-size: 2em;
+    text-align: center;
+    color: white;
+    padding-bottom: 20px;
+}
+
+
+#formLogin{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+
+#formLogin input
+{
+    height: 50px;
+    background: transparent;
+    border: 2px solid white;
+    outline: none;
+    border-radius: 20px;
+    font-size: 1em;
+    padding: 0 60px;
+    color: white;
+    text-align: center;
+}
+#formLogin input:focus,
+#formLogin input:valid{
+    border-color: #15A6CA;
+}
+
+#formLogin label
+{
+    color: white;
+    position: absolute;
+    top: 30%;
+    align-items: center;
+    font-size: 1em;
+    pointer-events: none;
+    transition: top 0.1s;
+}
+
+#formLogin input:focus ~ label,
+#formLogin input:valid ~ label{
+    top: -10px;
+    font-size: 1em;
+    background-color: #183B5D;
+    padding: 0 6px;
+    color: #15A6CA;
+}
+
+#formLogin button{
+    width: 40%;
+    height: 45px;
+    border-radius: 45px;
+    background: #15A6CA;
+    border: none;
+    outline: none;
+    cursor: pointer;
+    font-size: 1em;
+    color: #1B4168;
+    font-weight: 600;
+}
+
+#formLogin button:hover{
+    background: white;
+    color: #1B4168;
+}
+
+
