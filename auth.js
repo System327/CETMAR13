@@ -75,10 +75,6 @@ router.post('/register', async (req, res) => {
   }
 });
 
-
-const express = require('express');
-const db = require('./ConexionBD'); // Asegúrate de que la ruta sea correcta
-
 router.get('/probar-bd', async (req, res) => {
   try {
     const [rows] = await db.query('SELECT 1 + 1 AS resultado');
