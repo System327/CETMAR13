@@ -63,7 +63,7 @@
     opacity: 100%;
 }
 
-/* =============== parte Bienvenida =============== */
+/* =============== parte Bienvenida ===============
 
 .bienvenida{
     text-align: center;
@@ -89,7 +89,7 @@
 }
 
 /* =============== Pequeña introduccion =============== */
-.introduccion{
+/* .introduccion{
     width: 100%;
     min-height: 550px;
     display: flex;
@@ -142,6 +142,123 @@
     font-family: Tahoma;
     line-height: 1.5;
     text-align: justify;
+} */ 
+
+/* =============== parte Bienvenida =============== */
+
+.bienvenida {
+  text-align: center;
+  margin: 60px 0;
+  font-size: 20px;
+}
+
+.bienvenida h2 {
+  padding: 10px;
+}
+
+.barra-azul {
+  padding-top: 5px;
+  display: flex;
+  justify-content: center;
+}
+
+.barra-azul p {
+  background-color: #1284bd;
+  height: 5px;
+  width: 750px;
+  max-width: 90%;
+}
+
+/* =============== Pequeña introducción =============== */
+
+.introduccion {
+  width: 100%;
+  min-height: 550px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 20px;
+
+}
+
+.borde {
+  display: grid;
+  grid-template-columns: 1.2fr 1fr;
+  max-width: 1100px;
+  padding: 40px 70px;
+  box-shadow: 0px 5px 15px rgba(0, 0, 0, 0.25);
+  border-radius: 15px;
+  gap: 20px;
+  justify-content: center;
+  align-items: center;
+  background-color: white;
+}
+
+.fotografia {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.fotografia img {
+  width: 100%;
+  max-width: 100%;
+  height: auto;
+  border-radius: 15px;
+  box-shadow: 0 .25rem .5rem #21212126;
+}
+
+.texto {
+  padding: 15px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+
+.introduccion h3 {
+  font-size: 30px;
+  text-align: center;
+  font-family: Tahoma;
+}
+
+.introduccion p {
+  padding-top: 20px;
+  font-size: 19px;
+  font-family: Tahoma;
+  line-height: 1.5;
+  text-align: justify;
+}
+
+/* =============== Responsivo para pantallas pequeñas =============== */
+
+@media (max-width: 968px) {
+  .bienvenida{
+    font-size: 15px;
+  }  
+  .borde {
+    grid-template-columns: 1fr;
+    padding: 22px;
+  }
+  .fotografia{
+    width: 100%;
+    max-width: 500px;
+    height: auto;
+    display: block;
+    margin: 0 auto;
+  }
+  .introduccion h3 {
+    font-size: 20px;
+  }
+
+  .introduccion p {
+    font-size: 12px;
+    text-align: center;
+  }
+
+  .barra-azul p {
+    width: 90%;
+  }
 }
 
 /* PARTE NOTICIAS */
@@ -191,6 +308,11 @@
     background-color:rgb(10, 103, 150);
 } 
 
+@media (max-width: 768px){
+    .contenedor-imagen p{
+        margin: 15px;
+    }
+}
 
 
 

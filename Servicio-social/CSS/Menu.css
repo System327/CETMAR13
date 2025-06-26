@@ -92,7 +92,7 @@
 
 /* =============== Parte pie de pagina =============== */
 
-.abajo{
+/* .abajo{
 
     width: 100%;
     height: 200px;
@@ -136,5 +136,94 @@
     background-color: #1284bd;
     width: 100%;
     height: 50px;
-} 
+}  */
+
+/* =============== Parte pie de pagina =============== */
+
+.abajo {
+    width: 100%;
+    height: auto; /* para que crezca si hay más contenido */
+    background-color: black;
+    padding-bottom: 20px; /* espacio inferior en pantallas pequeñas */
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr; 
+    
+}
+
+.texto-direccion {
+    display: flex;
+    flex-direction: column;
+    gap: 5px;
+}
+
+.texto-direccion h4{
+    color: #fff;
+    font-size: 20px;
+    font-weight: bold;
+}
+.texto-direccion p{
+    color: gray
+}
+
+.barra-azul2{
+    background-color: #1284bd;
+    height: 5px;
+    width: 120px;
+}
+
+.texto-telefono {
+    display: flex;
+    flex-direction: column;
+}
+
+.texto-telefono h4{
+    color: #fff;
+    font-size: 20px;
+    font-weight: bold;
+}
+.texto-telefono p{
+    color: gray
+}
+
+
+.abajo-azul {
+    background-color: #1284bd;
+    width: 100%;
+    height: 50px;
+}
+
+/* =============== Responsivo =============== */
+
+@media (max-width: 768px) {
+  .texto-superior {
+    flex-direction: column;
+    gap: 20px;
+    padding-left: 20px;
+    font-size: 18px;
+  }
+
+  .telefono {
+    margin-left: 0;
+  }
+
+  .barra-azul2 {
+    flex-direction: column;
+    gap: 10px;
+  }
+
+  .barra-azul2 p {
+    margin-left: 20px;
+  }
+
+  .texto-inferior {
+    flex-direction: column;
+    gap: 10px;
+    padding-left: 20px;
+    font-size: 14px;
+  }
+
+  .abajo {
+    height: auto;
+  }
+}
 
