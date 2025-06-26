@@ -24,7 +24,7 @@ document.addEventListener('DOMContentLoaded', function () {
       if (data.ok) {
         // Guardar al usuario y redirigir
         localStorage.setItem('usuario', JSON.stringify(data.usuario));
-        window.location.href = '/HTML/inicio.html';
+        window.location.href = '/HTML/SubirNoticias.html';
       } else {
         alert(data.mensaje);
       }
