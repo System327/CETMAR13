@@ -90,69 +90,80 @@
     color: #dfca12;
 }  
 
-/* =============== Parte pie de pagina =============== */
-
-/* .abajo{
-
-    width: 100%;
-    height: 200px;
-    background-color: black;
+/* === Estilos para el botón hamburguesa === */
+.menu-toggle {
+    display: none;
+    background: none;
+    font-size: 30px;
+    color: white;
+    border: none;
+    cursor: pointer;
+    margin-left: 20px;
 }
 
-.texto-superior{
-    display: flex;
-    gap: 100px;
-    padding-top: 50px;
-    padding-left: 60px;
-    color: #fff;
-    font-size: 20px;
-    font-weight: bold;
-}
+/* === Responsive para móviles === */
+@media (max-width: 700px) {
+    .inferior {
+        flex-direction: column;
+        align-items: flex-start;
+        position: relative;
+    }
 
-.telefono{
-    margin-left:310px ;
-}
+    .menu-toggle {
+        display: block;
+    }
 
-.barra-azul2{
-    display: flex;
-    gap: 345px;
-}
-.barra-azul2 p{
+    .botones {
+        display: none;
+        flex-direction: column;
+        width: 100%;
         background-color: #1284bd;
-        height: 5px;
-        width: 120px;
-        margin-left: 60px;
-        margin-top: 10px;
+    }
+
+    .botones.active {
+        display: flex;
+    }
+
+    .botones ul {
+        width: 100%;
+    }
+
+    .botones ul a {
+        display: block;
+        width: 100%;
+        padding: 15px 20px;
+        border-top: 1px solid rgba(255,255,255,0.1);
+    }
 }
 
-.texto-inferior{
-    display: flex;
-    gap: 130px;
-    padding-top: 20px;
-    padding-left: 60px;
-    color: gray;
-}
-.abajo-azul{
-    background-color: #1284bd;
-    width: 100%;
-    height: 50px;
-}  */
 
 /* =============== Parte pie de pagina =============== */
 
-.abajo {
-    width: 100%;
-    height: auto; /* para que crezca si hay más contenido */
+
+.abajo-negro{
     background-color: black;
-    padding-bottom: 20px; /* espacio inferior en pantallas pequeñas */
+    width: 100%;
+    min-height: 180px;
+    display: flex;
+    justify-content: left;
+    align-items: center;
+
+}
+.abajo{
+    width: 900px;
+    height: 150px; /* para que crezca si hay más contenido */
     display: grid;
-    grid-template-columns: 1fr 1fr 1fr; 
-    
+    margin-left: 80px;
+    grid-template-columns: 1fr 1fr;
+    align-items: center;
+    justify-content: center;
+    gap: 80px;
 }
 
 .texto-direccion {
     display: flex;
     flex-direction: column;
+    flex-wrap: wrap;
     gap: 5px;
 }
 
@@ -174,6 +185,7 @@
 .texto-telefono {
     display: flex;
     flex-direction: column;
+    gap: 5px;
 }
 
 .texto-telefono h4{
@@ -194,36 +206,44 @@
 
 /* =============== Responsivo =============== */
 
-@media (max-width: 768px) {
-  .texto-superior {
-    flex-direction: column;
-    gap: 20px;
-    padding-left: 20px;
-    font-size: 18px;
-  }
+@media (max-width: 900px) {
+    .abajo{
+        width: 680px;
+        display: grid;
+        grid-template-columns: 2fr 1fr;
+        margin-left:50px ;
+    }
 
-  .telefono {
-    margin-left: 0;
-  }
+} 
 
-  .barra-azul2 {
-    flex-direction: column;
-    gap: 10px;
-  }
+@media (max-width: 500px) {
+    .abajo {
+        width: 100%;
+        margin-left: 50px;
+        margin-right: 5px;
+        height: auto;
+        grid-template-columns: 1fr; /* una sola columna */
+        gap: 20px;
+    }
 
-  .barra-azul2 p {
-    margin-left: 20px;
-  }
+    .texto-direccion h4{
+        font-size: 16px;
+    }
+    .texto-telefono h4 {
+        font-size: 16px;
+    }
 
-  .texto-inferior {
-    flex-direction: column;
-    gap: 10px;
-    padding-left: 20px;
-    font-size: 14px;
-  }
+    .barra-azul2 {
+        width: 80px;
+    }
 
-  .abajo {
-    height: auto;
-  }
+    .abajo-negro {
+        flex-direction: column;
+        justify-content: center;
+        padding: 20px 0;
+    }
+
+    .abajo-azul{
+        height: 30px;
+    }
 }
-
