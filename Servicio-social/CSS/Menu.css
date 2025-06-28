@@ -1,5 +1,12 @@
-/* =============== parte superior =============== */
+*{
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+    font-family: Tahoma, Arial, Helvetica, sans-serif;
 
+}
+
+/* =============== parte superior =============== */
 .superior{
     padding: 5px 25px;
     background-color: #1B4168;
@@ -219,8 +226,8 @@
 @media (max-width: 500px) {
     .abajo {
         width: 100%;
-        margin-left: 50px;
-        margin-right: 5px;
+        margin: 0;
+        padding:0 20px;
         height: auto;
         grid-template-columns: 1fr; /* una sola columna */
         gap: 20px;

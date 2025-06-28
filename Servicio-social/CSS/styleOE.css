@@ -5,14 +5,6 @@
     font-family: Tahoma
 }
 
-#img{
-    display: flex;
-    aspect-ratio: 8/2;
-    width: 100%;
-    height: auto;
-    flex: 1 0 100%;
-}
-
 
 /* =============== Parte Carreras =============== */
 .carreras{
@@ -24,6 +16,8 @@
 }
 
 .contenedor-carreras{
+    width: 100%;
+    box-sizing: border-box; /* muy importante para evitar scroll lateral */
     padding: 100px;
     height: auto;
     gap: 50px;
@@ -229,7 +223,50 @@
 }
 
 
-img {
-    height: 500px;
-    width: auto;
+@media (max-width: 500px) {
+
+    .contenedor-carreras {
+        grid-template-columns: 1fr; /* 1 columna */
+        padding: 30px 10px;
+    }
+
+    .carreras {
+        height: auto;
+        padding-bottom: 40px;
+    }
+
+
+    .btn-pesca,
+    .btn-mecanica,
+    .btn-refrigeracion,
+    .btn-acuacultura,
+    .btn-alimentos,
+    .btn-portuaria {
+        height: 140px;
+        font-size: 18px;
+        width: 300px;
+        margin: 0;
+    }
+
+    .btn-pesca i,
+    .btn-mecanica i,
+    .btn-refrigeracion i,
+    .btn-acuacultura i,
+    .btn-alimentos i,
+    .btn-portuaria i {
+        font-size: 36px;
+    }
+
+    .barra-blanca p {
+        width: 150px;
+    }
+
+    .contenedor-subtitulo h3{
+        font-size: 30px;
+    }
+
+    .barra-blanca p{
+    width: 300px;
+}
+
 }
