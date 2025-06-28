@@ -270,7 +270,7 @@
 }
 
 /* MEDIA QUERY CELULARES */
-@media (max-width: 500px) {
+@media (max-width: 700px) {
 
 .slider{
     aspect-ratio: 3/2;
