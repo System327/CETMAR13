@@ -28,38 +28,43 @@
     font-weight:bold;
 }
 
-        /* INFORMACION */
+/* INFORMACIÓN DEL PERFIL */
 
-.contenedor-info{
-    padding: 100px 120px;
-
+.perfil-tecnico {
+    padding: 80px 60px;
+    background-color: #f9f9f9; /* opcional para diferenciar sección */
 }
 
-.titulos{
-    padding-left: 150px;
+.perfil-header h2 {
+    text-align: center;
+    font-size: 32px;
+    font-weight: bold;
+    margin-bottom: 50px;
+}
+
+.perfil-contenido {
     display: grid;
     grid-template-columns: 1fr 1fr;
-    align-items: center;
-    padding: auto;
+    gap: 40px;
+    margin-left: 100px;
 }
 
-.parrafos{
-    padding-left: 150px;
-    margin-top: 30px;
-    gap: 20px;
-    display: grid;
-    grid-template-columns: 1fr 1fr;
-}
-.contenedor-info h3{
-    font-size: 25px;
-    font-weight:bold;
+.perfil-bloque h3 {
+    font-size: 24px;
+    margin-bottom: 20px;
+    color: #0d4e76;
 }
 
-.contenedor-info ul{
-    line-height: 1.4;
+.perfil-bloque ul {
+    padding-left: 20px;
+    list-style-type: disc;
+}
+
+.perfil-bloque li {
     font-size: 18px;
+    line-height: 1.6;
+    margin-bottom: 10px;
 }
-
 
 /* PARTE PLAN DE ESTUDIOS */
 .contenedor-subtitulo{
@@ -90,7 +95,6 @@
 .acordeon {
     max-width: 700px;
     margin: auto;
-
 }
 
 .acordeon input[type="checkbox"] {
@@ -109,7 +113,7 @@
     margin-top: 10px;
     font-weight: bold;
     transition: background-color 0.3s ease;
-
+    padding: 15px;
 }
 
 .acordeon label:hover {
@@ -133,7 +137,6 @@
     background-color: #f0f0f0;
     border-radius: 0 0 5px 5px;
     overflow: hidden;
-
 }
 
 .acordeon ul li{
@@ -142,13 +145,87 @@
 
 input:checked + label + ul {
     height: auto;
+    padding: 5px;
 }
 
 input:checked + label .icono::before {
     content: "-";
 }
 
-/* ABAJO */
-.abajo{
-    margin-top: 50px;
+
+.abajo-negro{
+    margin-top:30px;
+}
+
+
+/* ==== RESPONSIVE TABLET ==== */
+@media (max-width: 768px) {
+    .contenedor-info {
+        padding: 60px 30px;
+    }
+
+    .titulos,
+    .parrafos {
+        padding-left: 0;
+        grid-template-columns: 1fr;
+        text-align: center; /* mejor alineación en pantallas pequeñas */
+    }
+
+    .contenedor-imagen {
+        padding: 80px 0;
+        background-attachment: scroll; /* Mejora el rendimiento en móviles */
+    }
+
+    .contenedor-imagen h2 {
+        font-size: 28px;
+    }
+
+    .contenedor-subtitulo h3 {
+        font-size: 24px;
+    }
+
+    .barra-blanca p {
+        width: 100%;
+        max-width: 200px;
+        margin: auto;
+    }
+}
+
+/* ==== RESPONSIVE MÓVILES PEQUEÑOS ==== */
+@media (max-width: 480px) {
+    .contenedor-info {
+        padding: 40px 20px;
+    }
+    
+    .perfil-tecnico{
+        padding: 20px;
+    }
+    .perfil-contenido{
+        margin: 0;
+        padding: 0;
+
+    }
+    .contenedor-imagen {
+        padding: 60px 0;
+    }
+
+    .contenedor-imagen h2 {
+        font-size: 22px;
+    }
+
+    .contenedor-subtitulo h3 {
+        font-size: 20px;
+    }
+
+    .barra-blanca p {
+        width: 100%;
+        max-width: 150px;
+        margin: auto;
+        font-size: 14px;
+    }
+
+    .acordeon label{
+        margin: 7px 8px;
+    }
+
 }
